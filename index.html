@@ -1,1 +1,38 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wiki Viewer</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/color/jquery.color-2.1.2.js">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<div class="container-fluid" ng-app="wikiViewer" ng-controller="MainCtrl">
+  </br>
+  <form ng-submit="search()" class="text-center">
+    <input type="text" ng-model="searchTxt">
+    <input type="submit" value="search" id="searchB">
+    <input type="button" value="random" id="randB" ng-click="getRand()">
+  </form>
+  
+  </br>
+  <div class="text-center">
+    <button class="btn histB" ng-repeat="word in hist" ng-click="action($index)">{{word}}</button>
+  </div>
+  </br>
+  <div>
+    <ul>
+      <a ng-href="{{item.link}}" target="_blank" ng-repeat="item in list">
+        <div class="row box">
+          <div class="col-sm-3"><img src="{{item.image}}" class="pic"></div>
+          <div class="col-sm-9"><h1>{{item.title}}</h1><p>{{item.extract}}</p></div>       
+         </div>
+      </a>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
