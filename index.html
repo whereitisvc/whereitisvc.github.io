@@ -1,38 +1,359 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
-	<title>Wiki Viewer</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://code.jquery.com/color/jquery.color-2.1.2.js">
-	<link rel="stylesheet" href="style.css">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
-</head>
-<body>
-<div class="container-fluid" ng-app="wikiViewer" ng-controller="MainCtrl">
-  </br>
-  <form ng-submit="search()" class="text-center">
-    <input type="text" ng-model="searchTxt">
-    <input type="submit" value="search" id="searchB">
-    <input type="button" value="random" id="randB" ng-click="getRand()">
-  </form>
+  <meta charset="UTF-8">
+  <title>Personal Website</title>
   
-  </br>
-  <div class="text-center">
-    <button class="btn histB" ng-repeat="word in hist" ng-click="action($index)">{{word}}</button>
-  </div>
-  </br>
-  <div>
-    <ul>
-      <a ng-href="{{item.link}}" target="_blank" ng-repeat="item in list">
-        <div class="row box">
-          <div class="col-sm-3"><img src="{{item.image}}" class="pic"></div>
-          <div class="col-sm-9"><h1>{{item.title}}</h1><p>{{item.extract}}</p></div>       
-         </div>
-      </a>
-    </ul>
-  </div>
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Lato'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <body data-spy="scroll" data-target="#myNavbar">
+<!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="navbar-brand" href="#"><img id="logo" src="https://vectr.com/tmp/a2Cm3cDbfT/j2rAkqnfo0.svg?width=640&height=640&select=j2rAkqnfo0page0&source=page" align="top"></a>-->
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="page-scroll" href="#home">Home</a></li>
+                    <li><a class="page-scroll" href="#resume">Background</a></li>
+                    <li><a class="page-scroll" href="#skills">Skills</a></li>
+                    <li><a class="page-scroll" href="#project">Project</a></li>
+                    <li><a class="page-scroll" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+      
+   <article id="home" class="tab-pane fade in active">
+        <!-- Full Width Image Header with Logo -->
+        <!-- Image backgrounds are set within the full-width-pics.css file. -->
+        <header class="text-center">
+            <img id="myHead" class="img-thumbnail img-circle" src="https://s20.postimg.org/uj6abw37h/image.jpg">
+            <h1>Nai-Jack Li (黎乃傑)</h1> 
+            <div class="box">
+              <p>Hi, I am now seeking for an intern opportunity in computer science related field. I plan to apply for 2018 fall CS master degree, considering the time of the semester begin (2018 Sept.), I wish to enhance my expert knowledge and working ability during this term. I am strongly interested in Machine Learning and Computer Vision. And for practical skills, I am good at front-end web development and android application development. More information about my <span><a class="page-scroll" href="#resume" style="color:#ffff33;">background</a></span> provided below. By the way, I am a <span style="font-weight:bold;">U.S. citizen</span>. Hence I have no working visa concern. Please <span><a class="page-scroll" href="#contact" style="color:#ffff33;">contact</a></span> me without heistation :)</p>
+            </div>    
+            <div class="box2 container-fluid">
+              <div class="row">
+                  <div class="col-lg-3 col-sm-3 col-xs-3 text-center">
+                      <a href="https://www.facebook.com/whereitisvc" class="icon">
+                        <i class="fa fa-facebook-square fa-3x"></i>
+                      </a>
+                  </div>
+                  <div class="col-lg-3 col-sm-3 col-xs-3 text-center">
+                      <a href="https://www.linkedin.com/in/nai-jack-li-b2403613b/" class="icon">
+                        <i class="fa fa-linkedin-square fa-3x"></i>
+                      </a>
+                  </div>
+                  <div class="col-lg-3 col-sm-3 col-xs-3 text-center">
+                      <a href="https://github.com/whereitisvc" target="_blank" class="icon">
+                        <i class="fa fa fa-github fa-3x"></i>
+                      </a>
+                  </div>
+                  <div class="col-lg-3 col-sm-3 col-xs-3 text-center">
+                      <a href="https://codepen.io/whereitisvc/" target="_blank" class="icon">
+                        <i class="fa fa fa-codepen fa-3x"></i>
+                      </a>
+                  </div>
+              </div>
+            </div>
+        </header>
+
+        <!-- Content Section -->
+        <section id="resume">
+            <div class="container-fluid">
+                          
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-xs-12">    
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2>National Chiao Tung University, Taiwan</h2>
+                    <h3>Electrical and Computer Engineering, Bachelor</h3>
+                    <p>2012 ~ 2016</p>
+                    <li>Major in Computer Engineering and Information and Communication</li>
+                    <li>GPA: 3.40, 150 credits</li>
+                    <li>2nd place in 2015 Open Hardware Platform Cloud Application Raspberry Pi Group</li>
+                    <li>Teaching Assistance in Pop Dance Club</li>
+                   
+                </div>
+                <div class="col-lg-5 col-md-5 col-xs-12">
+                    <img class="img-responsive img-rounded" src="https://s20.postimg.org/mey675gsd/image.jpg" style="width:100%; max-width:300px; padding-top:10px;">
+                </div>
+            </div>
+            
+            <br><br><br><br>
+            
+            <div class="row box">
+                <div class="col-lg-5 col-md-5 col-xs-12">
+                    <img class="img-responsive img-rounded" src="https://s20.postimg.org/tjfzg6o1p/6.jpg" style="width:100%; max-width:300px;">
+                </div>
+                <div class="col-lg-7 col-md-7 col-xs-12"> 
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2>Taichung Branch Administrative Enforcement Agency</h2>
+                    <h3>Substitute Military Service</h3>
+                    <p>2016 ~ 2017</p>
+                    <li>Develop and maintain case management system</li>
+                    <li>Assist  with administrative work</li>                
+                </div>              
+            </div>
+
+        </div>
+        <!-- /.container -->
+        </section>
+        
+        <section id="skills" class="text-center">
+          <h1>Skills</h1>
+          <br>
+          <table class="table ">
+            <tr>
+              <th>program language</th>
+              <th>course performance / related experience</th>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td>Data Structure (4.3 / 4.3)</td>
+            </tr>
+            <tr>
+              <td>C++</td>
+              <td>Object-Oriented Programming (4.0 / 4.3)</br>Computer Vision (3.7 / 4.3)</br><span><a class="page-scroll" href="#project_invasion" style="color:#ffff33;">Invasion Detected Alarming System</a></span></td>
+            </tr>
+            <tr>
+              <td>Java</td>
+              <td>Java Programming (4.0 / 4.3)</br>Creative Software Project (4.0 / 4.3)</br><span><a class="page-scroll" href="#project_ocr" style="color:#ffff33;">Application of Optical Character Recognition</a></span></br><span><a class="page-scroll" href="#project_ar" style="color:#ffff33;">Application of Argument Reality</a></span></td>
+            </tr>
+            <tr>
+              <td>Matlab</td>
+              <td>Introduction to Digital Communication (4.3 / 4.3)</br>Intelligent Data Analysis (4.0 / 4.3)</td>
+            </tr>
+            <tr>
+              <td>HTML/ CSS/ Javascript</td>
+              <td>This website<br><span><a class="page-scroll" href="#project_demo" style="color:#ffff33;">My portfolio</a></span></td>
+            </tr>
+            <tr>
+              <td>Visual Basic</td>
+              <td>Develop and maintain case management system in Administrative Enforcement Agency</td>
+            </tr>          
+          </table>
+        </section>
+
+        <section id="project" class="text-center">
+          <h1 id="project_invasion">Project</h1>       
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12"><h2>Invasion Detected Alarming System</h2></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                  <div class="video-container">
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/xIGMnmwI8w8" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>              
+            </div>
+            <div class="row">
+              <div class="col-lg-12">  
+                <img src="https://s20.postimg.org/bfhk9afr1/image.jpg" class="rightImg" width="300px"/>
+                <p>Used the feature tracking technology to detect the invasion. Once the system detected the invasion, it would push alarming messages to customer’s mobile device. The feature tracking algorithm was implemented by OpenCV and C++, and the system was operated under Banana-Pi (ARM).</p>
+                <footer><span style="color: #005ce6;">Award</span>: 2015 Open Hardware Platform Cloud Application Raspberry Pi Group, 2nd place</footer>
+                
+                <footer><span style="color: #005ce6;">Advisor</span>: Prof. Chin Teng Lin, PhD <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chao-Ting Hong, Postdoctor</footer>
+               </div>             
+            </div>
+          </div>
+            
+          <br id="project_ocr">
+          <hr class="hr-line1">
+          <div class="container-fluid">
+            <div class="row" style="margin-bottom:10px;">
+              <div class="col-lg-12" id="project_ocr"><h2>Application of Optical Character Recognition</h2></div>                     
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <img src="https://s20.postimg.org/ase260th9/3.jpg" class="leftImg" width="250px"/>
+                <img src="https://s20.postimg.org/mirznem9p/4.jpg" class="leftImg" width="250px"/>
+                <p>Designed an Android application which can easily attain information of movies by scanning movie titles on posters. Used optical character recognition to abstract movie titles from the camera image. Search movie information by the title and abstract it by parsing website.</p>
+                <footer><span style="color: #005ce6;">Advisor</span>: Prof. Rung-Hung Gau, PhD</footer>
+              </div>
+            </div>
+          </div>
+          
+          <br id="project_ar">
+          <hr class="hr-line1">
+          <div class="contain-fluid">
+            <div class="row">
+              <div class="col-lg-12" id="project_ar">
+                <h2>Application of Argument Reality (escape room game)</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="video-container">
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/jmZgbN4gRic" frameborder="0" allowfullscreen></iframe>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">  
+                <p>Designed an escape room game based on argument reality. Gamers use smart phone as the tool to solve enigmas in the room and try to escape. Implemented argument reality by OpenCV under Android.</p>
+                <footer><span style="color: #005ce6;">Advisor</span>: Prof. I-Chen Lin, PhD </footer>
+               </div>             
+            </div>
+            
+          </div>
+          
+          <br id="project_demo">
+          <hr class="hr-line1">
+          <div class="contain-fluid">
+             <div class="row">
+              <div class="col-lg-12">
+                <h2>Practicing Demo</h2>
+              </div>
+             </div>
+             <div class="row">
+               <div class="col-lg-4 col-md-6 col-sm-6">
+                 <div class="thumbnail demo">
+                    <img src="https://s20.postimg.org/c11xrnlfh/8.png" alt="Thumbnail">
+                    <div class="text-center">
+                      <h3>Caculator</h3>
+                      <p>A caculator app done by javascript.</p>
+                      <p>
+                        <a href="https://codepen.io/whereitisvc/pen/JJqVxv?editors=0100" target="_blank" class="btn btn-primary thumbnail-button" role="button">View Details</a>   
+                      </p>
+                    </div>
+                 </div>
+               </div> 
+               <div class="col-lg-4 col-md-6 col-sm-6">
+                 <div class="thumbnail demo">
+                    <img src="https://s20.postimg.org/tbscjod31/9.png" alt="Thumbnail">
+                    <div class="text-center">
+                      <h3>Wiki Viewer</h3>
+                      <p>Wiki search engine done by wiki's api.</p>
+                      <p>
+                        <a href="https://codepen.io/whereitisvc/pen/ybEvYy?editors=0010" target="_blank" class="btn btn-primary thumbnail-button" role="button">View Details</a>   
+                      </p>
+                    </div>
+                 </div>
+               </div>
+               <div class="col-lg-4 col-md-6 col-sm-6">
+                 <div class="thumbnail demo">
+                    <img src="https://s20.postimg.org/sq7z1b7el/10.png" alt="Thumbnail">
+                    <div class="text-center">
+                      <h3>Quote Machine</h3>
+                      <p>Generate random quote.</p>
+                      <p>
+                        <a href="https://codepen.io/whereitisvc/pen/dWJYrd?editors=0100" target="_blank" class="btn btn-primary thumbnail-button" role="button">View Details</a>   
+                      </p>
+                    </div>
+                 </div>
+               </div>
+               <div class="col-lg-4 col-md-6 col-sm-6">
+                 <div class="thumbnail demo">
+                    <img src="https://s20.postimg.org/7uloq2b7h/11.png" alt="Thumbnail">
+                    <div class="text-center">
+                      <h3>Twitch API</h3>
+                      <p>A simple streamer status list.</p>
+                      <p>
+                        <a href="https://codepen.io/whereitisvc/pen/qmMNYJ" target="_blank" class="btn btn-primary thumbnail-button" role="button">View Details</a>   
+                      </p>
+                    </div>
+                 </div>
+               </div>
+               <div class="col-lg-4 col-md-6 col-sm-6">
+                 <div class="thumbnail demo">
+                    <img src="https://s20.postimg.org/nz3i5jp6l/12.png" alt="Thumbnail">
+                    <div class="text-center">
+                      <h3>Weather App</h3>
+                      <p>Show the weather condition at your time zone.</p>
+                      <p>
+                        <a href="https://codepen.io/whereitisvc/pen/ZKvZmJ?editors=0100" target="_blank" class="btn btn-primary thumbnail-button" role="button">View Details</a>   
+                      </p>
+                    </div>
+                 </div>
+               </div>
+               <div class="col-lg-4 col-md-6 col-sm-6">
+                 <div class="thumbnail demo">
+                    <img src="https://s20.postimg.org/z18l3zj99/13.png" alt="Thumbnail">
+                    <div class="text-center">
+                      <h3>Tribute Page</h3>
+                      <p>Simple practice for html and css.</p>
+                      <p>
+                        <a href="https://codepen.io/whereitisvc/pen/wdgQdq?editors=1000" target="_blank" class="btn btn-primary thumbnail-button" role="button">View Details</a>   
+                      </p>
+                    </div>
+                 </div>             
+               </div>
+             </div>
+          </div>
+        </section>
+            
+        <section id="contact">
+          <div class="container-fluid">
+            <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <h2 class="section-heading">Contact Me!</h2>
+                      <hr class="primary">
+                      <p>Give me a call or send me an email/message and I will get back to you as soon as possible!</p>
+                  </div>
+                  <div class="col-lg-3 col-sm-3 col-xs-3 text-center">
+                      <a href="#" class="icon">
+                        <i class="fa fa-phone fa-3x"></i>
+                        <p>(669)272-4208</p>
+                      </a>
+                  </div>
+                  <div class="col-lg-3 col-sm-3 col-xs-3 text-center">
+                      <a href="mailto:whereitisvc@gmail.com" class="icon">
+                        <i class="fa fa-envelope-o fa-3x"></i>
+                        <p>whereitisvc@gmail.com</p>
+                      </a>
+                  </div>
+                  <div class="col-lg-3 col-sm-3 col-xs-3 text-center">
+                      <a href="https://www.facebook.com/whereitisvc" target="_blank" class="icon">
+                        <i class="fa fa-facebook-square fa-3x"></i>
+                        <p>whereitisvc</p>
+                      </a>
+                  </div>
+                  <div class="col-lg-3 col-sm-3 col-xs-3 text-center">
+                      <a href="https://www.linkedin.com/in/nai-jack-li-b2403613b/" target="_blank" class="icon">
+                        <i class="fa fa-linkedin-square fa-3x"></i>
+                        <p>nai-jack li</p>
+                      </a>
+                  </div>
+             </div>
+             
+          </div>
+        </section>
+        
+  </article>
+
+    
 </div>
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+    <script src="js/index.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,171 @@
+body, h1, h2, h3, h4, h5, h6 {
+  //font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
+}
+body{
+  position: relative;
+}
+
+#logo{
+  width: 25px;
+  height: 30px;
+
+}
+
+#home{
+  h1{
+    font-size: 60px;
+  }
+  header{
+    background: url('https://static.pexels.com/photos/14676/pexels-photo-14676.png') no-repeat center center scroll;
+    background-size: cover;
+    padding: 100px 0 ;
+    min-height: 100vh;
+    color: white;
+    #myHead{
+      margin: 100px 0 10px 0;
+      width: 200px;
+    }
+    .box{
+      margin: 0 20vw 0 20vw;
+      font-size: 18px;
+    }
+    .box2{
+      //padding: 10px auto;
+      max-width: 200px;
+      margin: 50px auto;
+      color: white; 
+      a{
+        color: #e6e6e6;
+      }
+    }
+  }
+}
+
+#resume{
+  padding: 50px 20vw 50px 20vw;
+  background: url('https://static.pexels.com/photos/242236/pexels-photo-242236.jpeg') repeat center center scroll;
+  background-size: cover;
+  .section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid gray;//#e7e7e7;
+  }
+  p{
+    font-size: 18px;
+  }
+  li{
+    font-size: 18px;
+  }
+
+}
+
+#skills{
+  //background: url('https://static.pexels.com/photos/86084/bokeh-lights-night-86084.jpeg') repeat 600px center scroll;
+  //background: url('https://static.pexels.com/photos/27406/pexels-photo-27406.jpg') repeat center center scroll;
+  background: black;
+  background-size: cover;
+  padding: 50px 20vw 95px 20vw;
+  color: #f2f2f2;
+  font-size: 18px;
+  table{
+    background: #1a1a1a;
+    max-width: 820px;
+    border-color: black;
+    th{
+      text-align: center;
+      //color: #00ffff;
+    }
+    margin: auto;
+    
+  }
+  
+}
+
+#project{
+  padding: 50px 20vw 50px 20vw;
+  background: #e6e6e6;
+  color: black;
+  //font-size: 1em;
+  p{
+    font-size: 24px;
+    text-align: left;
+  }
+  footer{
+    font-size: 20px;
+    font-style: italic;
+    text-align: left;
+  }
+  .rightImg{
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  .leftImg{
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  hr.hr-line1 {
+    border: 0;
+    height: 1px;
+    background: #333;
+    /*
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -o-linear-gradient(left, #ccc, #333, #ccc);*/
+  }
+  .demo{
+    padding: auto;
+    margin: 6px;
+    //float: left;
+    width: 100%;
+    height: 400px;
+    p{
+      font-size: 18px;
+      text-align: center;
+    }
+    img{
+      margin-top: 5px;
+      width: 95%;
+      height: 55%;
+      max-height: 230px;
+    }
+  }
+  
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  //padding-top: 30px;
+  margin: 10px auto 20px auto;
+  //max-width: 900px;
+  //height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#contact{
+  padding: 50px 20vw 50px 20vw;
+  background: #ffcc00;
+  color: black;
+  .icon{
+    margin: 20px auto;
+    color: black;
+  }
+}
+
+
+
+

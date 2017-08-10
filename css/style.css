@@ -1,0 +1,151 @@
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+#logo {
+  width: 25px;
+  height: 30px;
+}
+
+#home h1 {
+  font-size: 60px;
+}
+#home header {
+  background: url("https://static.pexels.com/photos/14676/pexels-photo-14676.png") no-repeat center center scroll;
+  background-size: cover;
+  padding: 100px 0;
+  min-height: 100vh;
+  color: white;
+}
+#home header #myHead {
+  margin: 100px 0 10px 0;
+  width: 200px;
+}
+#home header .box {
+  margin: 0 20vw 0 20vw;
+  font-size: 18px;
+}
+#home header .box2 {
+  max-width: 200px;
+  margin: 50px auto;
+  color: white;
+}
+#home header .box2 a {
+  color: #e6e6e6;
+}
+
+#resume {
+  padding: 50px 20vw 50px 20vw;
+  background: url("https://static.pexels.com/photos/242236/pexels-photo-242236.jpeg") repeat center center scroll;
+  background-size: cover;
+}
+#resume .section-heading-spacer {
+  float: left;
+  width: 200px;
+  border-top: 3px solid gray;
+}
+#resume p {
+  font-size: 18px;
+}
+#resume li {
+  font-size: 18px;
+}
+
+#skills {
+  background: black;
+  background-size: cover;
+  padding: 50px 20vw 95px 20vw;
+  color: #f2f2f2;
+  font-size: 18px;
+}
+#skills table {
+  background: #1a1a1a;
+  max-width: 820px;
+  border-color: black;
+  margin: auto;
+}
+#skills table th {
+  text-align: center;
+}
+
+#project {
+  padding: 50px 20vw 50px 20vw;
+  background: #e6e6e6;
+  color: black;
+}
+#project p {
+  font-size: 24px;
+  text-align: left;
+}
+#project footer {
+  font-size: 20px;
+  font-style: italic;
+  text-align: left;
+}
+#project .rightImg {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+#project .leftImg {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+#project hr.hr-line1 {
+  border: 0;
+  height: 1px;
+  background: #333;
+  /*
+  background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -o-linear-gradient(left, #ccc, #333, #ccc);*/
+}
+#project .demo {
+  padding: auto;
+  margin: 6px;
+  width: 100%;
+  height: 400px;
+}
+#project .demo p {
+  font-size: 18px;
+  text-align: center;
+}
+#project .demo img {
+  margin-top: 5px;
+  width: 95%;
+  height: 55%;
+  max-height: 230px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  margin: 10px auto 20px auto;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#contact {
+  padding: 50px 20vw 50px 20vw;
+  background: #ffcc00;
+  color: black;
+}
+#contact .icon {
+  margin: 20px auto;
+  color: black;
+}
