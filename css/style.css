@@ -15,7 +15,7 @@ body {
   font-size: 60px;
 }
 #home header {
-  background: url("https://static.pexels.com/photos/14676/pexels-photo-14676.png") no-repeat center center scroll;
+  background: url("../image/cover.png") no-repeat center center scroll;
   background-size: cover;
   padding: 100px 0;
   min-height: 100vh;
@@ -40,7 +40,7 @@ body {
 
 #resume {
   padding: 50px 20vw 50px 20vw;
-  background: url("https://static.pexels.com/photos/242236/pexels-photo-242236.jpeg") repeat center center scroll;
+  background: url("../image/resume_cover.jpeg") repeat center center scroll;
   background-size: cover;
 }
 #resume .section-heading-spacer {
